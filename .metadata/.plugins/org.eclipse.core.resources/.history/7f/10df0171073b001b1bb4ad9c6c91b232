@@ -1,0 +1,67 @@
+/**
+ * 
+ */
+package com.atguigu.crowd.mvc.handler;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.atguigu.crowd.entity.Admin;
+import com.atguigu.crowd.entity.Student;
+import com.atguigu.crowd.service.api.AdminService;
+import com.atguigu.crowd.util.ResultEntity;
+
+/**
+ *
+ * @Author: xy187 2020年12月7日 下午10:19:47
+ *
+ * @Desc:
+ */
+@Controller
+public class TestMVC {
+    @Autowired
+    private AdminService adminService;
+    private Logger logger = LoggerFactory.getLogger(TestMVC.class);
+
+    @ResponseBody
+    @RequestMapping("/jsontest/student.json")
+    public ResultEntity<Student> handleCopexObj(@RequestBody Student student) {
+        logger.info(student.toString());
+        return ResultEntity.successWithData(student);
+    }//疑问？springMVC怎么讲自定义对象返回的
+
+    @ResponseBody
+    @RequestMapping("/jsontest/array02.json")
+    public String receiveArray02(@RequestBody Integer[] arrayL) {
+        for (Integer num : arrayL) {
+            System.out.println(num);
+        }
+        return "success";
+    }
+
+    @ResponseBody
+    @RequestMapping("/jsontest/array.json")
+    public String receiveArray(@RequestParam("array[]") List<Integer> arrayL) {
+        for (Integer num : arrayL) {
+            System.out.println(num);
+        }
+        return "success";
+    }
+
+    @RequestMapping("/pages/test.html")
+    public String testSSM(ModelMap modelMap) {
+        List<Admin> admins = adminService.getAll();
+        modelMap.addAttribute("adminList", admins);
+        return "target";
+    }
+
+}

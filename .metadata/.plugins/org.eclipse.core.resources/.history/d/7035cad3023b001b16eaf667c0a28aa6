@@ -1,0 +1,23 @@
+package com.atguigu.crowd.entity;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ *
+ * @Author: xy187 2020年12月10日 下午11:35:50
+ *
+ * @Desc:
+ */
+public class Student {
+    private Integer sid;
+    private String name;
+    private Integer age;
+    private String sex;
+    private Address address;
+    private Map<String, String> score = new HashMap<>();
+    private List<String> classes = new ArrayList<>();
+
+}

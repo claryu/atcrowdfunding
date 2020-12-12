@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package com.atguigu.crowd.entity;
+
+import java.util.HashMap;
+
+/**
+ *
+ * @Author: xy187 2020年12月10日 下午11:35:50
+ *
+ * @Desc:
+ */
+public class Student {
+    private Integer sid;
+    private String name;
+    private Integer age;
+    private String sex;
+    private Address address;
+    private HashMap<String, String> score = new HashMap<>();
+
+}

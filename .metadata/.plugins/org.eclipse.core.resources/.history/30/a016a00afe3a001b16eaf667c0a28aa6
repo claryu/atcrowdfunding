@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.atguigu.crowd.entity;
+
+/**
+ *
+ * @Author: xy187 2020年12月10日 下午11:37:21
+ *
+ * @Desc: 
+ */
+public class Address {
+
+}

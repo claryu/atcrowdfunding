@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<!-- http://localhost:8080/atcrowdfunding02-admin-webui/pages/index.html -->
+<base href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/">
+<script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+   $(function(){
+	   $("#button01").click(function(){
+		   $.ajax({
+	           "url":"jsontest/array.json",
+	           "type":"post",
+	           "data":{"array":[3,5,9]},
+	           "dataType":"text",
+	           "success":function(data){
+	        	   alert(data);
+	           },
+	           "error":function(errorMsg){
+	        	   alert(errorMsg);
+	           }
+	       });
+	   });
+	   
+	   $("#button02").click(function(){
+		   var array = [3,6,9];
+		   var arrayStr = JSON.stringify(array);
+		   console.info("arrayStr: "+arrayStr);
+           $.ajax({
+               "url":"jsontest/array02.json",
+               "type":"post",
+               "data":{"array":arrayStr},
+               "dataType":"text",
+               "success":function(data){
+                   alert(data);
+               },
+               "error":function(errorMsg){
+                   alert(errorMsg);
+               }
+           });
+       });
+	   
+   });
+   
+</script>
+</head>
+<body>          
+    <a href="pages/test.html">测试SSM整合</a>
+    <hr>
+    <button id="button01">send array</button>
+    <hr>
+    <button id="button02">send array02</button>
+</body>
+</html>

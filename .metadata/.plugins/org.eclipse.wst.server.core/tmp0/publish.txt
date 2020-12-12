@@ -1,0 +1,7 @@
+#Tomcat publish data
+#Fri Dec 11 22:02:56 CST 2020
+org.eclipse.jst.j2ee.server\:atcrowdfunding05-common-util=D\:\\02dev_tool\\apache-tomcat-7.0.65\\webapps\\atcrowdfunding02-admin-webui\\WEB-INF\\lib\\atcrowdfunding05-common-util-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:atcrowdfunding04-admin-entity=D\:\\02dev_tool\\apache-tomcat-7.0.65\\webapps\\atcrowdfunding02-admin-webui\\WEB-INF\\lib\\atcrowdfunding04-admin-entity-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\02dev_tool\\01_maven\\localRepository\\org\\springframework\\spring-web\\4.3.20.RELEASE\\spring-web-4.3.20.RELEASE.jar=D\:\\02dev_tool\\apache-tomcat-7.0.65\\webapps\\atcrowdfunding02-admin-webui\\WEB-INF\\lib\\spring-web-4.3.20.RELEASE.jar
+org.eclipse.jst.j2ee.server\:atcrowdfunding03-admin-component=D\:\\02dev_tool\\apache-tomcat-7.0.65\\webapps\\atcrowdfunding02-admin-webui\\WEB-INF\\lib\\atcrowdfunding03-admin-component-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:atcrowdfunding02-admin-webui=D\:\\02dev_tool\\apache-tomcat-7.0.65\\webapps\\atcrowdfunding02-admin-webui

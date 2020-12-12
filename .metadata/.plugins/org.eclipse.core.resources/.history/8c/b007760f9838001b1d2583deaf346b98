@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.atguigu.crowd.mvc.handler;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.atguigu.crowd.service.api.AdminService;
+
+/**
+ *
+ * @Author: xy187 2020年12月7日 下午10:19:47
+ *
+ * @Desc:
+ */
+@Controller
+public class TestMVC {
+    @Autowired
+    private AdminService adminService;
+
+    @RequestMapping("/pages/test.html")
+    public String testSSM() {
+
+        return "target";
+
+    }
+
+}
